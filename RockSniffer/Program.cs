@@ -377,6 +377,7 @@ namespace RockSniffer
                 outputtext = outputtext.Replace("%NOTES_MISSED%", nd.TotalNotesMissed.ToString());
                 outputtext = outputtext.Replace("%TOTAL_NOTES%", nd.TotalNotes.ToString());
                 outputtext = outputtext.Replace("%CURRENT_ACCURACY%", FormatPercentage(nd.Accuracy));
+                outputtext = outputtext.Replace("%GAME_STAGE%", memReadout.gameStage);
 
                 //Write to output
                 WriteTextToFileLocking("output/" + of.filename, outputtext);

@@ -24,7 +24,8 @@ namespace RockSniffer.Configuration
             { "song_timer.txt", "%SONG_TIMER%/%SONG_LENGTH%" },
             { "notes.txt", "%NOTES_HIT%/%TOTAL_NOTES%" },
             { "accuracy.txt", "%CURRENT_ACCURACY%" },
-            { "streaks.txt", "%CURRENT_STREAK%/%HIGHEST_STREAK%" }
+            { "streaks.txt", "%CURRENT_STREAK%/%HIGHEST_STREAK%" },
+            { "game_stage.txt", "%GAME_STAGE%" }
         };
 
         //Convert dictionary to array
