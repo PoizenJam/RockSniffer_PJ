@@ -13,7 +13,9 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Drawing.Text;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -21,7 +23,7 @@ using System.Threading;
 
 namespace RockSniffer
 {
-    class Program
+        class Program
     {
         internal const string version = "0.4.2";
 
@@ -40,6 +42,7 @@ namespace RockSniffer
         private RSMemoryReadout memReadout = new RSMemoryReadout();
         private SongDetails details = new SongDetails();
         private DiscordRPCHandler rpcHandler;
+        string gameState;
 
         static void Main(string[] args)
         {
@@ -277,17 +280,19 @@ namespace RockSniffer
                     break;
                 }
 
+                gameState = sniffer.currentState.ToString();
                 OutputDetails();
 
                 //GOTTA GO FAST
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
 
-                if (random.Next(100) == 0)
-                {
-                    Console.WriteLine("*sniff sniff*");
-                }
+                //if (random.Next(1000) == 0)
+                //{
+                //    Console.WriteLine("*sniff sniff*");
+                //}
             }
 
+            
             sniffer.Stop();
 
             //Clean up as best as we can
@@ -377,7 +382,8 @@ namespace RockSniffer
                 outputtext = outputtext.Replace("%NOTES_MISSED%", nd.TotalNotesMissed.ToString());
                 outputtext = outputtext.Replace("%TOTAL_NOTES%", nd.TotalNotes.ToString());
                 outputtext = outputtext.Replace("%CURRENT_ACCURACY%", FormatPercentage(nd.Accuracy));
-                outputtext = outputtext.Replace("%GAME_STAGE%", memReadout.gameStage);
+                outputtext = outputtext.Replace("%GAME_STAGE%", memReadout.gameStage); 
+                outputtext = outputtext.Replace("%GAME_STATE%", gameState);
 
                 //Write to output
                 WriteTextToFileLocking("output/" + of.filename, outputtext);
