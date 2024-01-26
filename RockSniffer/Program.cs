@@ -25,7 +25,7 @@ namespace RockSniffer
 {
         class Program
     {
-        internal const string version = "0.4.2";
+        internal const string version = "0.1";
 
         internal static ICache cache;
         internal static Config config;
@@ -69,7 +69,7 @@ namespace RockSniffer
         {
             //Set title and print version
             Console.Title = string.Format("RockSniffer {0}", version);
-            Logger.Log("RockSniffer {0} ({1}bits)", version, Is64Bits ? "64" : "32");
+            Logger.Log("RockSniffer_PJ {0} ({1}bits)", version, Is64Bits ? "64" : "32");
 
             //Initialize and load configuration
             config = new Config();
