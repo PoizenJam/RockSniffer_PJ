@@ -13,20 +13,13 @@ The intended use case is to enhance stat tracking and video editing capabilities
 - Logs song details and player stats on output, stored in 'sniffer.log'. Includes whether the song was ever paused or restarted AND CDLC author!
 
 ### Example Log Ouput:
-[2024-01-25 20:42:12.409] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;
-
-[2024-01-25 20:42:16.145] Song Paused!
-
-[2024-01-25 20:42:21.235] Song Resumed!
-
-[2024-01-25 20:42:16.145] Song Paused!
-
-[2024-01-25 20:42:28.608] EVENT=END;completed=False;paused=True;accuracy=100%;totalNotes=0;notesHit=0;highestStreak=0;
-
-[2024-01-25 20:42:28.937] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;
-
-[2024-01-25 20:45:28.516] EVENT=END;completed=True;paused=False;accuracy=98.2%;totalNotes=451;notesHit=443;highestStreak=157;
-
+[2024-01-25 20:42:12.409] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;<br />
+[2024-01-25 20:42:16.145] Song Paused!<br />
+[2024-01-25 20:42:21.235] Song Resumed!<br />
+[2024-01-25 20:42:16.145] Song Paused!<br />
+[2024-01-25 20:42:28.608] EVENT=END;completed=False;paused=True;accuracy=100%;totalNotes=0;notesHit=0;highestStreak=0;<br />
+[2024-01-25 20:42:28.937] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;<br />
+[2024-01-25 20:45:28.516] EVENT=END;completed=True;paused=False;accuracy=98.2%;totalNotes=451;notesHit=443;highestStreak=157;<br />
 
 Note: This shows the output of a song starting, pausing, resuming, pausing, restarting, then finishing! Note the 'Completed' and 'Paused' status in the EVENT=END status.
 Log can be easily parsed into different formats such as CSV or JSON.
@@ -36,7 +29,7 @@ Requires custom [RockSnifferLib] fork @: (https://github.com/PoizenJam/RockSniff
 # RockSniffer Setup
 Go here for a quick guide how to set up RockSniffer: [RockSniffer Wiki](https://github.com/kokolihapihvi/RockSniffer/wiki/Set-Up)
 
-# NOTE
+## NOTE
 
 Please note that this version may increase the overhead and write activity compared to the normal Rocksniffer.
 It may also be prone to bugs not present in the main Rocksniffer distribution.
