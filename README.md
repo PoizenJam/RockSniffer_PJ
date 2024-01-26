@@ -14,12 +14,19 @@ The intended use case is to enhance stat tracking and video editing capabilities
 
 ## Example Log Ouput:
 [2024-01-25 20:42:12.409] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;
+
 [2024-01-25 20:42:16.145] Song Paused!
+
 [2024-01-25 20:42:21.235] Song Resumed!
+
 [2024-01-25 20:42:16.145] Song Paused!
+
 [2024-01-25 20:42:28.608] EVENT=END;completed=False;paused=True;accuracy=100%;totalNotes=0;notesHit=0;highestStreak=0;
+
 [2024-01-25 20:42:28.937] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;
+
 [2024-01-25 20:45:28.516] EVENT=END;completed=True;paused=False;accuracy=98.2%;totalNotes=451;notesHit=443;highestStreak=157;
+
 
 Note: This shows the output of a song starting, pausing, resuming, pausing, restarting, then finishing! Note the 'Completed' and 'Paused' status in the EVENT=END status.
 Log can be easily parsed into different formats such as CSV or JSON.
