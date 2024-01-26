@@ -6,13 +6,13 @@ RockSniffer_PJ is an altered fork of the original RockSniffer with enhanced play
 The fork will track whether a song has been paused or restarted, and outputs times-stamped song-details on song start and end. 
 The intended use case is to enhance stat tracking and video editing capabilities, as the time-stamps can be used to cut individual song videos from larger recordings.
 
-# ADDITIONAL FEATURES
+## ADDITIONAL FEATURES
 - Output of 'game_stage.txt', which tracks Rocksmith's internal game state (i.e., whether you are in a song or in menus)
 - Output of 'game_state.txt', which tracks Rocksmith's status using Rocksniffer (includes Pause and Restart detection!)
 - Logs times with millisecond precision
 - Logs song details and player stats on output, stored in 'sniffer.log'. Includes whether the song was ever paused or restarted AND CDLC author!
 
-## Example Log Ouput:
+### Example Log Ouput:
 [2024-01-25 20:42:12.409] EVENT=START;artist=Rush;album=A Farewell to Kings;year=1977;song=Closer to the Heart;length=182.345;path=Bass;tuning=E Standard;author=Ubisoft;
 
 [2024-01-25 20:42:16.145] Song Paused!
